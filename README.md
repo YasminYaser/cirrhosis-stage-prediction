@@ -8,7 +8,7 @@ Predicting the histologic stage (1–4) of liver cirrhosis from clinical signs a
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-🔗 **Live demo:** [add your Streamlit link here after deployment]
+🔗 **Live demo:** [liver-cirrhosis-stage.streamlit.app](https://liver-cirrhosis-stage.streamlit.app)
 
 ---
 
@@ -139,7 +139,6 @@ An interactive Streamlit app lets you enter a patient's data and get a stage pre
 - Model performance tab with metrics and an explanation of the leakage fix
 - Dataset explainer tab
 
- Live demo: [liver-cirrhosis-stage.streamlit.app](https://liver-cirrhosis-stage.streamlit.app)
 
 ---
 
