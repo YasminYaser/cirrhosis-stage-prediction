@@ -1,0 +1,13 @@
+{
+  "accuracy": 0.5301204819277109,
+  "f1_macro": 0.3921245421245421,
+  "cv_f1_macro": 0.4088256516719563,
+  "baseline_accuracy": 0.37349397590361444,
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_depth": 4,
+    "n_estimators": 300
+  },
+  "n_train": 329,
+  "n_test": 83
+}
