@@ -64,11 +64,11 @@ Cirrhosis staging normally requires a **liver biopsy** — an invasive, costly, 
 
 Target distribution is imbalanced — Stage 3/4 dominate, Stage 1 is rare (21 cases):
 
-![Categorical features dashboard](assets/categorical_dashboard.png)
+![Categorical features dashboard](categorical_dashboard.png)
 
 Correlation between lab values and disease stage — lower Albumin and higher Bilirubin/Copper/Prothrombin line up with more advanced disease, matching known liver-disease biology:
 
-![Correlation heatmap](assets/correlation_heatmap.png)
+![Correlation heatmap](correlation_heatmap.png)
 
 ---
 
@@ -76,7 +76,7 @@ Correlation between lab values and disease stage — lower Albumin and higher Bi
 
 Six algorithms were trained and compared with 5-fold cross-validation (scored by **F1-macro**, to treat every stage fairly despite the class imbalance):
 
-![Model comparison](assets/model_comparison.png)
+![Model comparison](model_comparison.png)
 
 **XGBoost** came out on top and was then tuned with `GridSearchCV`.
 
@@ -88,8 +88,24 @@ Six algorithms were trained and compared with 5-fold cross-validation (scored by
 | Majority-class baseline | 37.3% |
 | F1-macro | ~0.43 |
 
-![Confusion matrix](assets/confusion_matrix.png)
-![Feature importance](assets/feature_importance.png)
+
+<table>
+<tr>
+<td width="50%">
+
+**Confusion Matrix**
+![Confusion matrix](confusion_matrix.png)
+
+</td>
+<td width="50%">
+
+**Feature Importance**
+![Feature importance](feature_importance.png)
+
+</td>
+</tr>
+</table>
+
 
 ### ⚠️ From research to deployment: fixing data leakage
 
@@ -157,13 +173,6 @@ cirrhosis-stage-prediction/
 
 `Python` · `pandas` · `scikit-learn` · `XGBoost` · `Streamlit` · `Plotly` · `seaborn`
 
----
-
-## 👩‍💻 Authors
-
-Graduation project — built as a summer project extension.
-
----
 
 ## 📄 License
 
