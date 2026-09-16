@@ -1,4 +1,4 @@
-# 🩺 Cirrhosis Stage Prediction
+# 🩺 Cirrhosis Stage Prediction 🩺
 
 Predicting the histologic stage (1–4) of liver cirrhosis from clinical signs and lab results, using machine learning on the Mayo Clinic primary biliary cirrhosis trial dataset.
 
@@ -12,7 +12,7 @@ Predicting the histologic stage (1–4) of liver cirrhosis from clinical signs a
 
 ---
 
-## 📋 Overview
+##  Overview
 
 Cirrhosis staging normally requires a **liver biopsy** — an invasive, costly, and risky procedure. This project explores whether routine **blood test results and clinical signs** can predict a patient's fibrosis stage as a non-invasive alternative, using supervised machine learning.
 
@@ -23,7 +23,7 @@ Cirrhosis staging normally requires a **liver biopsy** — an invasive, costly, 
 
 ---
 
-## 📊 Dataset
+##  Dataset 📊
 
 | | |
 |---|---|
@@ -60,7 +60,7 @@ Cirrhosis staging normally requires a **liver biopsy** — an invasive, costly, 
 
 ---
 
-## 🔍 Exploratory Data Analysis
+##  Exploratory Data Analysis
 
 Target distribution is imbalanced — Stage 3/4 dominate, Stage 1 is rare (21 cases):
 
@@ -72,7 +72,7 @@ Correlation between lab values and disease stage — lower Albumin and higher Bi
 
 ---
 
-## 🤖 Modeling
+##  Modeling
 
 Six algorithms were trained and compared with 5-fold cross-validation (scored by **F1-macro**, to treat every stage fairly despite the class imbalance):
 
@@ -107,7 +107,7 @@ Six algorithms were trained and compared with 5-fold cross-validation (scored by
 </table>
 
 
-### ⚠️ From research to deployment: fixing data leakage
+###  From research to deployment: fixing data leakage ⚠️ ⚠️
 
 The research notebook used every column, including `Status` and `N_Days` — both only known **after** a patient's outcome, not at diagnosis time. Using them in a real prediction tool is data leakage.
 
@@ -121,7 +121,7 @@ The deployment pipeline (`app/train_deployment_model.py`) **drops both columns**
 
 ---
 
-## 🧪 Why the accuracy is modest — and why that's expected
+##  Why the accuracy is modest — and why that's expected
 
 - **Small dataset**: ~400 patients total, Stage 1 has only 21 records
 - **Class imbalance**: Stages 3/4 dominate the data
@@ -130,7 +130,7 @@ The deployment pipeline (`app/train_deployment_model.py`) **drops both columns**
 
 ---
 
-## 🖥️ Live App
+##  Live App
 
 An interactive Streamlit app lets you enter a patient's data and get a stage prediction with confidence scores:
 
@@ -139,17 +139,11 @@ An interactive Streamlit app lets you enter a patient's data and get a stage pre
 - Model performance tab with metrics and an explanation of the leakage fix
 - Dataset explainer tab
 
-**Run locally:**
-```bash
-cd app
-pip install -r requirements.txt
-python train_deployment_model.py   # generates model artifacts
-streamlit run app.py
-```
+ Live demo: [liver-cirrhosis-stage.streamlit.app](https://liver-cirrhosis-stage.streamlit.app)
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure 📁
 
 ```
 cirrhosis-stage-prediction/
@@ -169,7 +163,7 @@ cirrhosis-stage-prediction/
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 `Python` · `pandas` · `scikit-learn` · `XGBoost` · `Streamlit` · `Plotly` · `seaborn`
 
